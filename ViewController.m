@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "Factory.h"
 
 @interface ViewController ()
 
@@ -17,12 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    Factory *factory = [[Factory alloc] init];
+    NSArray *tilesCreated = [factory tiles];
+    NSLog(@"%@", tilesCreated);
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
+   }
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
 }
