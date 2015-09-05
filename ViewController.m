@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     Factory *factory = [[Factory alloc] init];
     self.tiles = [factory tiles];
-    self.currentPoint = CGPointMake(0, 0);
+    self.currentPoint = CGPointMake(3, 2);
     [self updateTile];
 }
 
