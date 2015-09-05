@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Factory.h"
+#import "Tile.h"
 
 @interface ViewController ()
 
@@ -21,15 +22,20 @@
     Factory *factory = [[Factory alloc] init];
     self.tiles = [factory tiles];
     self.currentPoint = CGPointMake(0, 0);
-    NSLog(@"%f %f", self.currentPoint.x, self.currentPoint.y);
-    
-
+    [self updateTile];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
    }
+
+-(void)updateTile
+{
+    Tile *tileObj = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    self.storyLabel.text = tileObj.story;
+}
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
 }
