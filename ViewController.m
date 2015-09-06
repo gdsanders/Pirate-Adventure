@@ -25,17 +25,10 @@
     [self updateTile];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
    }
-
--(void)updateTile
-{
-    Tile *tileObj = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
-    self.storyLabel.text = tileObj.story;
-}
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
 }
@@ -51,4 +44,30 @@
 
 - (IBAction)westButtonPressed:(UIButton *)sender {
 }
+
+// Helper methods listed below
+
+- (void)updateTile
+{
+    Tile *tileObj = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    self.storyLabel.text = tileObj.story;
+}
+
+
+- (BOOL)tileExistsAtPoint:(CGPoint)point
+{
+    if (point.y >= 0 && point.x >=0 && point.x < [self.tiles count] && point.y < [[self.tiles objectAtIndex:point.x] count]) {
+        return NO;
+    }
+    else {
+        return YES;
+    }
+}
+
+
+
+
 @end
+
+
+
