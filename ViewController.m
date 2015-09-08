@@ -35,15 +35,27 @@
 }
 
 - (IBAction)northButtonPressed:(UIButton *)sender {
+    self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y + 1);
+    [self updateButtons];
+    [self updateTile];
 }
 
 - (IBAction)eastButtonPressed:(UIButton *)sender {
+    self.currentPoint = CGPointMake(self.currentPoint.x + 1, self.currentPoint.x);
+    [self updateButtons];
+    [self updateTile];
 }
 
 - (IBAction)southButtonPressed:(UIButton *)sender {
+    self.currentPoint = CGPointMake(self.currentPoint.x, self.currentPoint.y - 1);
+    [self updateButtons];
+    [self updateTile];
 }
 
 - (IBAction)westButtonPressed:(UIButton *)sender {
+    self.currentPoint = CGPointMake(self.currentPoint.x - 1, self.currentPoint.y);
+    [self updateButtons];
+    [self updateTile];
 }
 
 // Helper methods listed below
