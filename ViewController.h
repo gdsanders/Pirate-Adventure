@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Character.h"
 
 @interface ViewController : UIViewController
 
@@ -14,6 +15,7 @@
 
 @property (nonatomic) CGPoint currentPoint;
 @property (strong, nonatomic) NSArray *tiles;
+@property (strong, nonatomic) Character *character;
 
 // IBOutlets listed below:
 

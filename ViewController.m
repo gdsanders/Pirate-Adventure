@@ -21,6 +21,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     Factory *factory = [[Factory alloc] init];
     self.tiles = [factory tiles];
+    self.character = [factory character];
     self.currentPoint = CGPointMake(0, 0);
     [self updateTile];
     [self updateButtons];
@@ -65,6 +66,9 @@
     Tile *tileObj = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     self.storyLabel.text = tileObj.story;
     self.backgroundImageView.image = tileObj.backgroundImage;
+    self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health];
+    self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
+    self.armorLabel.text = self.character.armor.name;
 }
 
 - (void)updateButtons
