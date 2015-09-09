@@ -22,7 +22,8 @@
     tile2.backgroundImage = [UIImage imageNamed:@"PirateBlacksmith.jpg"];
     
     Tile *tile3 = [[Tile alloc] init];
-    tile3.story = @"Tile 3 story";
+    tile3.story = @"A mysterious dock appears on the horizon.  Wait, wasn't this in a Scooby Doo episode?";
+    tile3.backgroundImage = [UIImage imageNamed:@"PirateFriendlyDock.jpg"];
     
     NSMutableArray *firstColumn = [[NSMutableArray alloc] init];
     [firstColumn addObject:tile1];
@@ -30,13 +31,16 @@
     [firstColumn addObject:tile3];
     
     Tile *tile4 = [[Tile alloc] init];
-    tile4.story = @"Tile 4 story";
+    tile4.story = @"You have found a parrot.  His name is Pookie Dane Berkshire. Pookie does not mess around and guards his Captain.";
+    tile4.backgroundImage = [UIImage imageNamed:@"PirateParrot.jpg"];
     
     Tile *tile5 = [[Tile alloc] init];
-    tile5.story = @"Tile 5 story";
+    tile5.story = @"Dude!  You have found a pirate weapon cache. Want a new pistol?";
+    tile5.backgroundImage = [UIImage imageNamed:@"PirateWeapons.jpg"];
     
     Tile *tile6 = [[Tile alloc] init];
-    tile6.story = @"Tile 6 story";
+    tile6.story = @"You have been captured and are ordered to walk the plank. AAaaaa meee hardy!";
+    tile6.backgroundImage = [UIImage imageNamed:@"PiratePlank.jpg"];
     
     NSMutableArray *secondColumn = [[NSMutableArray alloc] init];
     [secondColumn addObject:tile4];
