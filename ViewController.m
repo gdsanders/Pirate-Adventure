@@ -64,6 +64,7 @@
 {
     Tile *tileObj = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
     self.storyLabel.text = tileObj.story;
+    self.backgroundImageView.image = tileObj.backgroundImage;
 }
 
 - (void)updateButtons
