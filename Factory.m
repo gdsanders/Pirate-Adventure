@@ -14,10 +14,12 @@
 -(NSArray *)tiles
 {
     Tile *tile1 = [[Tile alloc] init];
-    tile1.story = @"Tile 1 story";
+    tile1.story = @"We need a fiery pirate Captain for this voyage. Are you in?";
+    tile1.backgroundImage = [UIImage imageNamed:@"PirateStart.jpg"];
     
     Tile *tile2 = [[Tile alloc] init];
-    tile2.story = @"Tile 2 story";
+    tile2.story = @"You are in the pirate armory. Upgrade your armor?";
+    tile2.backgroundImage = [UIImage imageNamed:@"PirateBlacksmith.jpg"];
     
     Tile *tile3 = [[Tile alloc] init];
     tile3.story = @"Tile 3 story";
