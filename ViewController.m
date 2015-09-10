@@ -24,6 +24,7 @@
     self.tiles = [factory tiles];
     self.character = [factory character];
     self.currentPoint = CGPointMake(0, 0);
+    [self updateCharacterStatsForArmor:nil withWeapon:nil withHealthEffect:0];
     [self updateTile];
     [self updateButtons];
 }
@@ -34,6 +35,10 @@
    }
 
 - (IBAction)actionButtonPressed:(UIButton *)sender {
+    
+    Tile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    [self updateCharacterStatsForArmor:tile.armor withWeapon:tile.weapon withHealthEffect:tile.healthEffect];
+    [self updateTile];
 }
 
 - (IBAction)northButtonPressed:(UIButton *)sender {
