@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "Factory.h"
 #import "Tile.h"
-#import "Character.h"
+
 
 @interface ViewController ()
 
@@ -23,6 +23,8 @@
     Factory *factory = [[Factory alloc] init];
     self.tiles = [factory tiles];
     self.character = [factory character];
+    self.boss = [factory boss];
+    
     self.currentPoint = CGPointMake(0, 0);
     [self updateCharacterStatsForArmor:nil withWeapon:nil withHealthEffect:0];
     [self updateTile];
@@ -37,6 +39,12 @@
 - (IBAction)actionButtonPressed:(UIButton *)sender {
     
     Tile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
+    if (tile.healthEffect == -15) {
+        
+        self.boss.health = self.boss.health - self.character.damage;
+        
+    }
+    
     [self updateCharacterStatsForArmor:tile.armor withWeapon:tile.weapon withHealthEffect:tile.healthEffect];
     [self updateTile];
 }

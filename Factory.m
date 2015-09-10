@@ -135,10 +135,16 @@
     weapon.name = @"Fists";
     weapon.damage = 10;
     character.weapon = weapon;
-    
-    
+
     return character;
     
+}
+
+-(PirateBoss *)boss
+{
+    PirateBoss *boss = [[PirateBoss alloc] init];
+    boss.health = 65;
+    return boss;
 }
 
 
