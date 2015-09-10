@@ -79,7 +79,7 @@
     tile8.story = @"Arrrgggggg.  It's the kraken!  Hide your booty mate!";
     tile8.backgroundImage = [UIImage imageNamed:@"PirateOctopusAttack.jpg"];
     tile8.healthEffect = -50;
-    tile8.actionButtonName = @"Posiden, Posedian, whatever your name";
+    tile8.actionButtonName = @"Call Geico!";
     
     Tile *tile9 = [[Tile alloc] init];
     tile9.story = @"You have stumbled and bumbled onto hidden pirate cave. Plunder...mmmmm?";
@@ -109,7 +109,7 @@
     tile12.story = @"Final faceoff with the fiend of the sea - Pirate Boss";
     tile12.backgroundImage = [UIImage imageNamed:@"PirateBoss.jpg"];
     tile12.healthEffect = -15;
-    tile12.actionButtonName = @"Call Bahamas Workforce Commission";
+    tile12.actionButtonName = @"Whip the Pirate Boss";
     
     NSMutableArray *fourthColumn = [[NSMutableArray alloc] init];
     [fourthColumn addObject:tile10];

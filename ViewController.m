@@ -46,6 +46,25 @@
     }
     
     [self updateCharacterStatsForArmor:tile.armor withWeapon:tile.weapon withHealthEffect:tile.healthEffect];
+    
+    if (self.character.health <= 0) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Grim reaper message!" message:@"Oh dear, you died!" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+
+    }
+    else if (self.boss.health <= 0) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Victory!" message:@"You defeated the Pirate Boss!" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) {}];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+
+    }
     [self updateTile];
 }
 
