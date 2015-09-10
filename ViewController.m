@@ -69,6 +69,7 @@
     self.healthLabel.text = [NSString stringWithFormat:@"%i", self.character.health];
     self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
     self.armorLabel.text = self.character.armor.name;
+    self.weaponLabel.text = self.character.weapon.name;
 }
 
 - (void)updateButtons
