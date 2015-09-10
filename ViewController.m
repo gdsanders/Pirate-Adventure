@@ -36,6 +36,8 @@
     // Dispose of any resources that can be recreated.
    }
 
+#pragma mark IBActions
+
 - (IBAction)actionButtonPressed:(UIButton *)sender {
     
     Tile *tile = [[self.tiles objectAtIndex:self.currentPoint.x] objectAtIndex:self.currentPoint.y];
@@ -92,7 +94,13 @@
     [self updateTile];
 }
 
-// Helper methods listed below
+- (IBAction)resetButtonPressed:(UIButton *)sender {
+    self.character = nil;
+    self.boss = nil;
+    [self viewDidLoad];
+}
+
+#pragma mark Helper methods listed below
 
 - (void)updateTile
 {

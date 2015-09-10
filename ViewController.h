@@ -49,6 +49,7 @@
 
 - (IBAction)westButtonPressed:(UIButton *)sender;
 
+- (IBAction)resetButtonPressed:(UIButton *)sender;
 
 
 @end

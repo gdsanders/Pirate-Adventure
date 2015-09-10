@@ -164,6 +164,16 @@
                                     <action selector="eastButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFy-gT-Mjq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1g-VX-G8d">
+                                <rect key="frame" x="20" y="550" width="88" height="30"/>
+                                <color key="backgroundColor" red="0.25456463460000001" green="0.59718572739999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Reset game">
+                                    <color key="titleColor" red="0.044673423160000003" green="0.1210409823" blue="0.64382102269999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLb-U3-Tgm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
