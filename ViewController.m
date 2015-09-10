@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Factory.h"
 #import "Tile.h"
+#import "Character.h"
 
 @interface ViewController ()
 
@@ -70,6 +71,7 @@
     self.damageLabel.text = [NSString stringWithFormat:@"%i", self.character.damage];
     self.armorLabel.text = self.character.armor.name;
     self.weaponLabel.text = self.character.weapon.name;
+    [self.actionButton setTitle:tileObj.actionButtonName forState:UIControlStateNormal];
 }
 
 - (void)updateButtons
@@ -92,6 +94,24 @@
     }
 }
 
+-(void)updateCharacterStatsForArmor:(Armor *)armor withWeapon:(Weapon *)weapon withHealthEffect:(int)healthEffect
+{
+    if (armor != nil) {
+        self.character.health = self.character.health - self.character.armor.health + armor.health;
+        self.character.armor = armor;
+    }
+    else if (weapon != nil) {
+        self.character.damage = self.character.damage - self.character.weapon.damage + weapon.damage;
+        self.character.weapon = weapon;
+    }
+    else if (healthEffect != 0) {
+        self.character.health = self.character.health + healthEffect;
+    }
+    else {
+        self.character.health = self.character.health + self.character.armor.health;
+        self.character.damage = self.character.damage + self.character.weapon.damage;
+    }
+}
 
 
 
